@@ -60,7 +60,7 @@ Example:
 
 
 
-- **SPLIT 2 CSV FILES IN %:**
+- **SPLIT EACH CSV (MASTER AND PAIR) IN 2 FILES BY %:**
 
 *$csv_pair->split( $perc_remains_first_file = 80 );*
 
