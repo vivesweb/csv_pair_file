@@ -1,4 +1,4 @@
-# csv_pair_file
+# csv_pair_file class
 Manage csv pair files for Machine Learning
 
 
