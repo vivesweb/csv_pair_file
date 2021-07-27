@@ -1,4 +1,4 @@
-# csv_pair_file class
+# csv_pair_file class in PHP for Machine Learning
 Manage csv pair files for Machine Learning
 
 
