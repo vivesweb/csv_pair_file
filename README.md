@@ -98,7 +98,7 @@ Example:
 
 
 
-- **GET AN ARRAY OF FIELD NAMES OF RANDOMIZED FIELD CREATED WITH randomize() METHOD:**
+- **GET AN ARRAY OF FILE NAMES OF RANDOMIZED FIELDS CREATED WITH randomize() METHOD:**
 
 *$csv_pair->get_csv_randomized_file_name( )*
 
@@ -112,7 +112,7 @@ Example:
 
 
 
-- **GET THE FIELD NAMES OF SPLITTED FIELDS CREATED WITH split() METHOD:**
+- **GET THE FILE NAMES OF SPLITTED FIELDS CREATED WITH split() METHOD:**
 
 *$csv_pair->get_csv_splitted_file_names( )*
 	 * return array $csv_splitted_file_names
