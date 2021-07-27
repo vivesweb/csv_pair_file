@@ -29,7 +29,7 @@ No more easy use is possible. You only need to include a master file .php as... 
  
 # RESUME OF METHODS:
 
-- **CREATE CSV PAIR FILE:**
+- **CREATE CSV PAIR OBJECT:**
  
 *$csv_pair = new csv_pair_file( $csv_file_name, $csv_pair_file_name );*
 
