@@ -93,23 +93,17 @@ Example:
 
 
 
-- **GET THE FIELD NAME OF RANDOMIZED FIELD CREATED WITH randomize() METHOD:**
+- **GET AN ARRAY OF FIELD NAMES OF RANDOMIZED FIELD CREATED WITH randomize() METHOD:**
 
 *$csv_pair->get_csv_randomized_file_name( )*
 
 Example:
 
-        echo $csv_pair->get_csv_randomized_file_name( )
+    $RandomizedFieldNames = $csv_pair->get_csv_randomized_file_name( );
+    echo $RandomizedFieldNames[0]; // Master Randomized File
+    echo $RandomizedFieldNames[1]; // Pair Randomized File
 
 
-
-- **GET THE PAIR FIELD NAME OF RANDOMIZED FIELD CREATED WITH randomize() METHOD:**
-
-*$csv_pair->get_csv_pair_randomized_file_name( )*
-
-Example:
-
-        echo $csv_pair->get_csv_pair_randomized_file_name( )
 
 
 
