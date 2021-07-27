@@ -78,7 +78,12 @@ Example:
 
 Example:
 
-        $csv_pair->split( 70 );
+        $FieldNames = $csv_pair->split( 70 );
+	
+        echo $FieldNames[0][0];
+        echo $FieldNames[0][1];
+        echo $FieldNames[1][0];
+        echo $FieldNames[1][1];
 
 
 
