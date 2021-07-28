@@ -21,7 +21,7 @@ require_once( 'csv_pair_file_class.php' ); // For manage csv files
 $csv_original_dataset = new csv_pair_file('original_dataset.csv', 'desired_dataset.csv');
 
 
-echo 'Randomize original Dataset'.PHP_EOL;
+echo 'Randomize original and desired Datasets'.PHP_EOL;
 
 $csv_original_dataset->randomize();
 
