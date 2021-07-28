@@ -30,7 +30,7 @@ $perc_rest_Test = 50;
 
 echo 'Splitting Randomized Dataset in '.$perc_Train.'% for Train and '.(100-$perc_Train).'% for Test & Validation'.PHP_EOL;
 
-$RandomizedName 	= $csv_original_dataset->get_csv_randomized_file_name();
+$RandomizedName 	= $csv_original_dataset->get_csv_randomized_file_names();
 
 $csv = new csv_pair_file( $RandomizedName[0], $RandomizedName[1] );
 $SplittedNames = $csv->split( $perc_Train );
