@@ -45,7 +45,7 @@ Example:
 
 Example:
 
-        $csv_pair->set_file_csv( $csv_file_name, $csv_pair_file_name );
+        $csv_pair->set_file_csv( 'master_dataset.csv", 'desired_values_dataset.csv' );
 	
 	
 - **RANDOMIZE CSV ROWS:**
