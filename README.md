@@ -65,15 +65,23 @@ Example:
 *$csv_pair->split( $perc_remains_first_file = 80 );*
 
    * First file created with first part of percentage.
+   
    * Second file created with the rest of percentage
+   
    * This one is repeated for pair file.
 	 
    * Param means the percentage with original file remains.
+   
    * For example split( 80 ) means that the first file will have 80% of data, and the second file will be created with the rest of 20% data
+   
    * return array $csv_splitted_file_names
+   
    * $csv_splitted_file_names[0][0]: Filename First part csv splitted
+   
    * $csv_splitted_file_names[0][1]: Filename Second part csv splitted
+   
    * $csv_splitted_file_names[1][0]: Pair Filename First part csv splitted
+  
    * $csv_splitted_file_names[1][1]: Pair Filename Second part csv splitted
 
 Example:
