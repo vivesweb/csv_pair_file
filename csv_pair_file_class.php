@@ -116,8 +116,17 @@ class csv_pair_file
 				
 				$Spl->seek($number);
 				$Spl_pair->seek($number);
+				
 				$Str 		= $Spl->fgetcsv();
 				$StrPair 	= $Spl_pair->fgetcsv();
+			}
+			
+			
+			if( is_array($Str) ){
+				$Str 		= implode(',', $Str);
+			}
+			if( is_array($StrPair) ){
+				$StrPair 	= implode(',', $StrPair);
 			}
 
 			$SplShuffled->fwrite( $Str );
@@ -212,16 +221,24 @@ class csv_pair_file
 				
 				$Spl->seek($i);
 				$Spl_pair->seek($i);
+				
 				$Str 		= $Spl->fgetcsv();
 				$StrPair 	= $Spl_pair->fgetcsv();
+			}
+			
+			
+			
+			
+			if( is_array($Str) ){
+				$Str 		= implode(',', $Str);
+			}
+			if( is_array($StrPair) ){
+				$StrPair 	= implode(',', $StrPair);
 			}
 
 			
 			
 			if($i<$FirstSecondPartRow){
-				print "((";
-				var_dump($Str);
-				print "))";
 				$SplSplittedFirst->fwrite( $Str );
 				$SplPairSplittedFirst->fwrite( $StrPair );
 			} else {
@@ -321,9 +338,9 @@ class csv_pair_file
      * 
 	 * @return string $csv_file_name
 	 */
-    public function get_csv_pair_file_namee( ){
+    public function get_csv_pair_file_name( ){
 		return $this->csv_pair_file_name;
-	 }// /get_csv_pair_file_namee()
+	 }// /get_csv_pair_file_name()
 
  } // /csv_pair_file class
  ?>
