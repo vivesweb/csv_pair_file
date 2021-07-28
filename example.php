@@ -37,17 +37,17 @@ $SplittedNames = $csv->split( $perc_Train );
 
 
 // We have New Train & Desired Data File...
-$csv_train_dataset 	= new csv_pair_file( $SplittedNames[0][0], $SplittedNames[1][0] );
+$csv_train_dataset 	= new csv_pair_file( $SplittedNames[0][0], $SplittedNames[0][1] );
 
 
 // The rest will need to splitted in 2 parts (Test & Validation data)
 echo 'Splitting Rest '.(100-$perc_Train).'% Dataset in 2 files of '.$perc_rest_Test.'% for Test and '.(100-$perc_rest_Test).'% for Validation'.PHP_EOL;
 
-$csv = new csv_pair_file( $SplittedNames[0][1], $SplittedNames[1][1] );
+$csv = new csv_pair_file( $SplittedNames[1][0], $SplittedNames[1][1] );
 $SplittedNames = $csv->split( $perc_rest_Test ); // new csv is perc_rest_Test% of the global data (100% - 70% = 30%) . Split it at 50% (80% + 15% + 15% = 100%)
 
 // We have  Test & Validation New Data Files
-$this->csv_test_dataset       			= new csv_pair_file( $SplittedNames[0][0], $SplittedNames[1][0] );
-$this->csv_validation_dataset 			= new csv_pair_file( $SplittedNames[0][1], $SplittedNames[1][1] );
+$this->csv_test_dataset       			= new csv_pair_file( $SplittedNames[0][0], $SplittedNames[0][1] );
+$this->csv_validation_dataset 			= new csv_pair_file( $SplittedNames[1][0], $SplittedNames[1][1] );
 
 ?>
