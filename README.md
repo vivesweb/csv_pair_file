@@ -108,11 +108,11 @@ Example:
 
 - **GET AN ARRAY OF FILE NAMES OF RANDOMIZED FIELDS CREATED WITH randomize() METHOD:**
 
-*$csv_pair->get_csv_randomized_file_name( )*
+*$csv_pair->get_csv_randomized_file_names( )*
 
 Example:
 
-    $RandomizedFieldNames = $csv_pair->get_csv_randomized_file_name( );
+    $RandomizedFieldNames = $csv_pair->get_csv_randomized_file_names( );
     echo $RandomizedFieldNames[0]; // Master Randomized File
     echo $RandomizedFieldNames[1]; // Pair Randomized File
 
