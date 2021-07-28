@@ -47,7 +47,7 @@ class csv_pair_file
         
         // Create a new file reference using SplFileObject:
         $this->Spl 				= new SplFileObject( $this->csv_file_name, 'r' );
-        $this->Spl_pair			= new SplFileObject( $this->csv_pair_file_name, 'r' );
+		$this->Spl_pair			= new SplFileObject( $this->csv_pair_file_name, 'r' );
         
         // Set Num Rows
         $this->set_num_rows( );
@@ -181,20 +181,20 @@ class csv_pair_file
 		
 		$csv_name_parsed = str_replace('.csv', '', basename($this->csv_file_name) ); // Only works with lowercase file names!!!!
 		
-		$csv_splitted_file_names[0][0] = $path.$csv_name_parsed.'_splitted_'.$perc_remains_first_file.'_1_'.$this->TimeTokenized.'.csv';
-		$csv_splitted_file_names[0][1] = $path.$csv_name_parsed.'_splitted_'.(100-$perc_remains_first_file).'_2_'.$this->TimeTokenized.'.csv';
-		$csv_splitted_file_names[1][0] = $path.$csv_name_parsed.'_splitted_pair_'.$perc_remains_first_file.'_1_'.$this->TimeTokenized.'.csv';
-		$csv_splitted_file_names[1][1] = $path.$csv_name_parsed.'_splitted_pair_'.(100-$perc_remains_first_file).'_2_'.$this->TimeTokenized.'.csv';
+		$csv_splitted_file_names[0][0] = $path.$csv_name_parsed.'_splitted_'.$perc_remains_first_file.'_1.csv';
+		$csv_splitted_file_names[0][1] = $path.$csv_name_parsed.'_splitted_pair_'.$perc_remains_first_file.'_1.csv';
+		$csv_splitted_file_names[1][0] = $path.$csv_name_parsed.'_splitted_'.(100-$perc_remains_first_file).'_2.csv';
+		$csv_splitted_file_names[1][1] = $path.$csv_name_parsed.'_splitted_pair_'.(100-$perc_remains_first_file).'_2.csv';
 		
 		unset( $csv_name_parsed );
 		unset( $path );
         
         $Spl					= $this->Spl; // Original Data
-		$Spl_pair				= $this->Spl_pair; // Original Data
+		$Spl_pair				= $this->Spl_pair; // Original Pair Data
 
         $SplSplittedFirst		= new SplFileObject( $csv_splitted_file_names[0][0], 'w' );
-        $SplSplittedSecond		= new SplFileObject( $csv_splitted_file_names[0][1], 'w' );
-        $SplPairSplittedFirst	= new SplFileObject( $csv_splitted_file_names[1][0], 'w' );
+        $SplPairSplittedFirst	= new SplFileObject( $csv_splitted_file_names[0][1], 'w' );
+        $SplSplittedSecond		= new SplFileObject( $csv_splitted_file_names[1][0], 'w' );
         $SplPairSplittedSecond	= new SplFileObject( $csv_splitted_file_names[1][1], 'w' );
 
 		$Spl->rewind();	// Ensure to go at first row
@@ -220,10 +220,10 @@ class csv_pair_file
 			
 			if($i<$FirstSecondPartRow){
 				$SplSplittedFirst->fwrite( $Str );
-				$SplPairSplittedFirst->fwrite( $Str );
+				$SplPairSplittedFirst->fwrite( $StrPair );
 			} else {
 				$SplSplittedSecond->fwrite( $Str );
-				$SplPairSplittedSecond->fwrite( $Str );
+				$SplPairSplittedSecond->fwrite( $StrPair );
 			}
         }
     
@@ -238,10 +238,12 @@ class csv_pair_file
 		unset( $SplPairSplittedFirst );
 		unset( $SplPairSplittedSecond );
 		unset( $i );
+		unset( $Str );
+		unset( $StrPair );
 
 		$this->csv_splitted_file_names = $csv_splitted_file_names;
         
-        return $csv_splitted_file_names;
+        return $this->csv_splitted_file_names;
 	} // / split()
     
     
@@ -277,7 +279,7 @@ class csv_pair_file
     /**
 	 * Get csv_randomized_file_names
      * 
-	 * @return array $csv_randomized_file_names
+	 * @return array $csv_randomized_file_name
 	 */
     public function get_csv_randomized_file_names( ){
 		return $this->csv_randomized_file_names;
