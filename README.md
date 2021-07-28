@@ -123,11 +123,16 @@ Example:
 - **GET THE FILE NAMES OF SPLITTED FIELDS CREATED WITH split() METHOD:**
 
 *$csv_pair->get_csv_splitted_file_names( )*
-	 * return array $csv_splitted_file_names
-	 * $csv_splitted_file_names[0][0]: Filename First part csv splitted
-	 * $csv_splitted_file_names[0][1]: Filename Second part csv splitted
-	 * $csv_splitted_file_names[1][0]: Pair Filename First part csv splitted
-	 * $csv_splitted_file_names[1][1]: Pair Filename Second part csv splitted
+
+return array $csv_splitted_file_names
+
+$csv_splitted_file_names[0][0]: Filename First part csv splitted
+
+$csv_splitted_file_names[0][1]: Filename Second part csv splitted
+
+$csv_splitted_file_names[1][0]: Pair Filename First part csv splitted
+
+$csv_splitted_file_names[1][1]: Pair Filename Second part csv splitted
 
 Example:
 
