@@ -35,7 +35,7 @@ No more easy use is possible. You only need to include a master file .php as... 
 
 Example:
 
-        $csv_pair = new csv_pair_file( $csv_file_name, $csv_pair_file_name );
+        $csv_pair = new csv_pair_file( 'master_dataset.csv", 'desired_values_dataset.csv' );
 
 
 
