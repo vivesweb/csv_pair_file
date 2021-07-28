@@ -21,7 +21,7 @@ class csv_pair_file
 {
     private $csv_file_name	= null;
 	private $csv_pair_file_name	= null;
-    private $csv_randomized_file_name	= array();
+    private $csv_randomized_file_names	= array();
     private $csv_splitted_file_names	= array(); // [0] will be first part of data splitted and [1] the rest
     private $num_rows		= 0;
     private $Spl			= null;
@@ -137,7 +137,7 @@ class csv_pair_file
 		$new_file_names[] = $new_file_name_randomized;
 		$new_file_names[] = $new_pair_file_name_randomized;
 
-		$this->csv_randomized_file_name = $new_file_names;
+		$this->csv_randomized_file_names = $new_file_names;
         
         return $new_file_names;
 	} // / randomize()
@@ -275,13 +275,13 @@ class csv_pair_file
     
     
     /**
-	 * Get csv_randomized_file_name
+	 * Get csv_randomized_file_names
      * 
-	 * @return array $csv_randomized_file_name
+	 * @return array $csv_randomized_file_names
 	 */
-    public function get_csv_randomized_file_name( ){
-		return $this->csv_randomized_file_name;
-	 }// /get_csv_randomized_file_name()
+    public function get_csv_randomized_file_names( ){
+		return $this->csv_randomized_file_names;
+	 }// /get_csv_randomized_file_names()
     
     
     
