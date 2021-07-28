@@ -103,6 +103,28 @@ Get the number of rows in primary .csv file (Second file expects to have the sam
 Example:
 
         echo $csv_pair->get_num_rows( );
+	
+
+- **GET NAME MASTER FILE:**
+
+*$csv_pair->get_csv_file_name( );*
+
+Get the File Name of Master File.
+Example:
+
+        echo $csv_pair->get_csv_file_name( );
+
+
+
+- **GET NAME PAIR FILE:**
+
+*$csv_pair->get_csv_pair_file_name( );*
+
+Get the File Name of Paired File.
+Example:
+
+        echo $csv_pair->get_csv_pair_file_name( );
+
 
 
 
