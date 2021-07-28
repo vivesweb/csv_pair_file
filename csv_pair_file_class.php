@@ -79,8 +79,8 @@ class csv_pair_file
 			
 			$csv_name_parsed = str_replace('.csv', '', basename($this->csv_file_name) ); // Only works with lowercase file names!!!!
             
-        	$new_file_name_randomized 		= $path.$csv_name_parsed.'_randomized_'.$this->TimeTokenized.'.csv';
-			$new_pair_file_name_randomized 	= $path.$csv_name_parsed.'_randomized_pair_'.$this->TimeTokenized.'.csv';
+        	$new_file_name_randomized 		= $path.$csv_name_parsed.'_rnd_'.$this->TimeTokenized.'.csv';
+			$new_pair_file_name_randomized 	= $path.$csv_name_parsed.'_rnd_pair_'.$this->TimeTokenized.'.csv';
 			
 			unset( $csv_name_parsed );
 			unset( $path );
@@ -190,10 +190,10 @@ class csv_pair_file
 		
 		$csv_name_parsed = str_replace('.csv', '', basename($this->csv_file_name) ); // Only works with lowercase file names!!!!
 		
-		$csv_splitted_file_names[0][0] = $path.$csv_name_parsed.'_splitted_'.$perc_remains_first_file.'_1.csv';
-		$csv_splitted_file_names[0][1] = $path.$csv_name_parsed.'_splitted_pair_'.$perc_remains_first_file.'_1.csv';
-		$csv_splitted_file_names[1][0] = $path.$csv_name_parsed.'_splitted_'.(100-$perc_remains_first_file).'_2.csv';
-		$csv_splitted_file_names[1][1] = $path.$csv_name_parsed.'_splitted_pair_'.(100-$perc_remains_first_file).'_2.csv';
+		$csv_splitted_file_names[0][0] = $path.$csv_name_parsed.'_splt_'.$perc_remains_first_file.'_1.csv';
+		$csv_splitted_file_names[0][1] = $path.$csv_name_parsed.'_splt_pair_'.$perc_remains_first_file.'_1.csv';
+		$csv_splitted_file_names[1][0] = $path.$csv_name_parsed.'_splt_'.(100-$perc_remains_first_file).'_2.csv';
+		$csv_splitted_file_names[1][1] = $path.$csv_name_parsed.'_splt_pair_'.(100-$perc_remains_first_file).'_2.csv';
 		
 		unset( $csv_name_parsed );
 		unset( $path );
