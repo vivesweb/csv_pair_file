@@ -219,6 +219,9 @@ class csv_pair_file
 			
 			
 			if($i<$FirstSecondPartRow){
+				print "((";
+				var_dump($Str);
+				print "))";
 				$SplSplittedFirst->fwrite( $Str );
 				$SplPairSplittedFirst->fwrite( $StrPair );
 			} else {
@@ -297,6 +300,30 @@ class csv_pair_file
     public function get_csv_splitted_file_names( ){
 		return $this->csv_splitted_file_names;
 	 }// /get_csv_splitted_file_names()
+    
+    
+    
+    
+    
+    /**
+	 * Get csv_file_name
+     * 
+	 * @return string $csv_file_name
+	 */
+    public function get_csv_file_name( ){
+		return $this->csv_file_name;
+	 }// /get_csv_file_name()
+    
+    
+    
+    /**
+	 * Get csv_pair_file_name
+     * 
+	 * @return string $csv_file_name
+	 */
+    public function get_csv_pair_file_namee( ){
+		return $this->csv_pair_file_name;
+	 }// /get_csv_pair_file_namee()
 
  } // /csv_pair_file class
  ?>
