@@ -43,7 +43,7 @@ Example:
 
 *$csv_pair->set_file_csv( $csv_file_name, $csv_pair_file_name );*
 
-You can give the names in the moment on create the object class, but if you don't given the field names, you can set it later with this method.
+You can set the names in the moment on create the object class, but if you don't given the field names, you can set it later with this method.
 
 Example:
 
@@ -53,6 +53,8 @@ Example:
 - **RANDOMIZE CSV ROWS:**
 
 *$csv_pair->randomize( $new_file_name_randomized = null, $new_pair_file_name_randomized = null );*
+
+*returns array with the 2 new file names*
 
 This method randomize the order in original $csv_file_name & csv_pair_file_name, but in both files the randomized new number of row will remain in correct correspondence between first randomized file and second randomized file. If not new names of files given, the system will create new files and store the names in the class. You can get this names later. This functions returns an array of the 2 new filenames.
 
@@ -65,6 +67,7 @@ Example:
 - **SPLIT EACH CSV (MASTER AND PAIR) IN 2 FILES BY %:**
 
 *$csv_pair->split( $perc_remains_first_file = 80 );*
+*return array with 4 new file names*
 
    * First file created with first part of percentage.
    
@@ -100,6 +103,7 @@ Example:
 - **GET NUM ROWS:**
 
 *$csv_pair->get_num_rows( );*
+*return num_rows*
 
 Get the number of rows in primary .csv file (Second file expects to have the same number of rows).
 Example:
@@ -110,6 +114,8 @@ Example:
 - **GET NAME MASTER FILE:**
 
 *$csv_pair->get_csv_file_name( );*
+
+*return master file name*
 
 Get the File Name of Master File.
 Example:
@@ -122,6 +128,8 @@ Example:
 
 *$csv_pair->get_csv_pair_file_name( );*
 
+*return pair file name*
+
 Get the File Name of Paired File.
 Example:
 
@@ -133,6 +141,8 @@ Example:
 - **GET AN ARRAY OF FILE NAMES OF RANDOMIZED FIELDS CREATED WITH randomize() METHOD:**
 
 *$csv_pair->get_csv_randomized_file_names( )*
+
+*return array 2 file names (Master and pair)*
 
 Example:
 
@@ -147,6 +157,8 @@ Example:
 - **GET THE FILE NAMES OF SPLITTED FIELDS CREATED WITH split() METHOD:**
 
 *$csv_pair->get_csv_splitted_file_names( )*
+
+*return array of 4 file names splitted*
 
 return array $csv_splitted_file_names
 
