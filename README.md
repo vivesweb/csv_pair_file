@@ -54,7 +54,7 @@ Example:
 
 *$csv_pair->randomize( $new_file_name_randomized = null, $new_pair_file_name_randomized = null );*
 
-*returns array with the 2 new file names*
+*returns array with the 2 new file names (Master & pair randomized files)*
 
 This method randomize the order in original $csv_file_name & csv_pair_file_name, but in both files the randomized new number of row will remain in correct correspondence between first randomized file and second randomized file. If not new names of files given, the system will create new files and store the names in the class. You can get this names later. This functions returns an array of the 2 new filenames.
 
