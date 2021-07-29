@@ -43,6 +43,8 @@ Example:
 
 *$csv_pair->set_file_csv( $csv_file_name, $csv_pair_file_name );*
 
+You can give the names in the moment on create the object class, but if you don't given the field names, you can set it later with this method.
+
 Example:
 
         $csv_pair->set_file_csv( 'master_dataset.csv", 'desired_values_dataset.csv' );
